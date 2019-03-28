@@ -1,0 +1,341 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{765EC9A4-2634-40DC-A71C-C55E22014134}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>FLM_Job_Portal</RootNamespace>
+    <AssemblyName>FLM Job Portal</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>FLM_Job_Portal.Program</StartupObject>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AddEmployee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddEmployee.Designer.cs">
+      <DependentUpon>AddEmployee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CalendarMonthJobView.cs" />
+    <Compile Include="DateTimeExtensions.cs" />
+    <Compile Include="EditEmployee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditEmployee.Designer.cs">
+      <DependentUpon>EditEmployee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditWork.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditWork.Designer.cs">
+      <DependentUpon>EditWork.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EmployeesOnJob.cs" />
+    <Compile Include="Home.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Home.Designer.cs">
+      <DependentUpon>Home.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HomeNonAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HomeNonAdmin.Designer.cs">
+      <DependentUpon>HomeNonAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="JobAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="JobAdd.Designer.cs">
+      <DependentUpon>JobAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="JobCardAdder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="JobCardAdder.Designer.cs">
+      <DependentUpon>JobCardAdder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="JobCardDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="JobCardDetail.Designer.cs">
+      <DependentUpon>JobCardDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="JobCardEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="JobCardEditor.Designer.cs">
+      <DependentUpon>JobCardEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="JobDelete.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="JobDelete.Designer.cs">
+      <DependentUpon>JobDelete.cs</DependentUpon>
+    </Compile>
+    <Compile Include="JobEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="JobEditor.Designer.cs">
+      <DependentUpon>JobEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="JobItem.cs" />
+    <Compile Include="JobStatusUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="JobStatusUpdate.Designer.cs">
+      <DependentUpon>JobStatusUpdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="JobView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="JobView.Designer.cs">
+      <DependentUpon>JobView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="JobViewNonAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="JobViewNonAdmin.Designer.cs">
+      <DependentUpon>JobViewNonAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PartOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PartOrder.Designer.cs">
+      <DependentUpon>PartOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SendToRecords.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SendToRecords.Designer.cs">
+      <DependentUpon>SendToRecords.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ServAndOrderComp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ServAndOrderComp.Designer.cs">
+      <DependentUpon>ServAndOrderComp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ServiceOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ServiceOrder.Designer.cs">
+      <DependentUpon>ServiceOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ServicesAndOrdering.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ServicesAndOrdering.Designer.cs">
+      <DependentUpon>ServicesAndOrdering.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserProfile.cs" />
+    <Compile Include="WorkComplete.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WorkComplete.Designer.cs">
+      <DependentUpon>WorkComplete.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WorkViewer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WorkViewer.Designer.cs">
+      <DependentUpon>WorkViewer.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AddEmployee.resx">
+      <DependentUpon>AddEmployee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditEmployee.resx">
+      <DependentUpon>EditEmployee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditWork.resx">
+      <DependentUpon>EditWork.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Home.resx">
+      <DependentUpon>Home.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HomeNonAdmin.resx">
+      <DependentUpon>HomeNonAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JobAdd.resx">
+      <DependentUpon>JobAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JobCardAdder.resx">
+      <DependentUpon>JobCardAdder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JobCardDetail.resx">
+      <DependentUpon>JobCardDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JobCardEditor.resx">
+      <DependentUpon>JobCardEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JobDelete.resx">
+      <DependentUpon>JobDelete.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JobEditor.resx">
+      <DependentUpon>JobEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JobStatusUpdate.resx">
+      <DependentUpon>JobStatusUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JobView.resx">
+      <DependentUpon>JobView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JobViewNonAdmin.resx">
+      <DependentUpon>JobViewNonAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PartOrder.resx">
+      <DependentUpon>PartOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="SendToRecords.resx">
+      <DependentUpon>SendToRecords.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ServAndOrderComp.resx">
+      <DependentUpon>ServAndOrderComp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ServiceOrder.resx">
+      <DependentUpon>ServiceOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ServicesAndOrdering.resx">
+      <DependentUpon>ServicesAndOrdering.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WorkComplete.resx">
+      <DependentUpon>WorkComplete.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WorkViewer.resx">
+      <DependentUpon>WorkViewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Program Background.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\M Logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\aac8e7f65a22b273556ba2b5203bb718.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Add Process.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Add Job.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\complete1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Delete Card.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Delete Job.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Job Card1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Outside1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Records.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\refresh1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Status.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Todays Work.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Status1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Edit Work.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Edit Work1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Add Employee.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Add Line.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\shipping.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
